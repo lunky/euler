@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e80de0188f7f5a76fbda176701cf9e51627e5f2bcd71795598ab56dd878ab179
+-- hash: 4e5024d59478bb6003ad99c78e9c6f00adbedf31ef32d10b373b09fe15f31872
 
 name:           euler
 version:        0.1.0.0
@@ -29,6 +29,7 @@ library
   exposed-modules:
       Lib
       Problem1
+      Problem122
       Problem14
       Problem2
       Problem20
@@ -38,6 +39,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , containers
   default-language: Haskell2010
 
 executable euler-exe
@@ -56,6 +58,7 @@ test-suite euler-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      Problem122Spec
       Problem14Spec
       Problem1Spec
       Problem20Spec
