@@ -13,7 +13,6 @@ spec = do
       take 10 fib `shouldBe` expected
   describe "Problem2" $ do
     it "should do sample 1" $ do
-      let input =10
       let expected=44
-      (sum $ filter even $ take 10 fib) `shouldBe` expected
+      sum (filter even $ take 10 fib) `shouldBe` expected
 

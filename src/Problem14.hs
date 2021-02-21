@@ -2,7 +2,6 @@ module Problem14 (
      run
     ,collatz
     ) where
-import Data.Char (digitToInt)
 
 collatz :: Int -> Int
 collatz input = collatz' input 1
