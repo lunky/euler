@@ -1,6 +1,7 @@
 module Main where
 
 import Lib
+import Problem122
 
 main :: IO ()
-main = someFunc
+main = print $ Problem122.run 200

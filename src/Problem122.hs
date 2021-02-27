@@ -1,9 +1,10 @@
+{-# LANGUAGE ScopedTypeVariables #-}
 module Problem122 (
      run
     ,run'
 ) where
 
-import Data.List
+import Data.List (find)
 import Data.IntSet (IntSet)
 import qualified Data.IntSet as Set 
 
@@ -26,4 +27,12 @@ run' target = run'' [[1]]
 next :: [Int] -> [[Int]]
 next input = map (\y -> (:input) $ head input + y) input
 
+{--
+  note * a more efficient data structure than a List looks possible but it needs
+  to efficiently implement find/filter and head?
+--}
 
+_knapsack items = m 
+ where
+     m 0 = 0
+     m w = maximum $ 0:[vi + m (w - wi) | (vi, wi) <- items, wi <= w]
