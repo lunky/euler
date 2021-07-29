@@ -1,0 +1,12 @@
+module Problem%PROBLEM_NUMBER%Spec where
+import Problem%PROBLEM_NUMBER%
+import Test.Hspec
+
+spec :: Spec
+spec = do
+  describe "problem%PROBLEM_NUMBER%" $ do
+    it "should do sample 1" $ do
+      let input =0
+      let expecteda=0
+      run input `shouldBe` expected
+
