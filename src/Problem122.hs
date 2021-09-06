@@ -5,8 +5,6 @@ module Problem122 (
 ) where
 
 import Data.List (find)
-import Data.IntSet (IntSet)
-import qualified Data.IntSet as Set 
 
 run :: Int -> Int
 run target = sum $ map run' [1..target]

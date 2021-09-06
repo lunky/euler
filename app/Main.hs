@@ -1,6 +1,5 @@
 module Main where
 
-import Lib
 import Problem122
 
 main :: IO ()

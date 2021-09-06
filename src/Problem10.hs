@@ -3,7 +3,6 @@ module Problem10 (
 ) where
 
 import Control.Monad
-import Control.Monad.ST
 import Data.Array.ST
 import Data.Array.Unboxed
 

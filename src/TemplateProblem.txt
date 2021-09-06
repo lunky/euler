@@ -1,0 +1,8 @@
+module Problem%%PROBLEM_NUMBER%% (
+     run
+    ) where
+
+run :: Int -> Int
+run input = 0
+
+

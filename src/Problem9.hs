@@ -10,9 +10,6 @@ run' input = head
                     $ filter (\y->sum y==input) 
                     $ combinationsOf 3 [1..input]
 
-isInt x = x == fromInteger (round x)
-
-
 combinationsOf :: Int -> [a] -> [[a]]
 combinationsOf 1 as        = map pure as
 combinationsOf k as@(x:xs) = run (l-1) (k-1) as $ combinationsOf (k-1) xs
