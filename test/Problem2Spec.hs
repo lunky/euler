@@ -1,4 +1,3 @@
-{-# LANGUAGE NumericUnderscores #-}
 module Problem2Spec where
 import Problem2
 import Test.Hspec

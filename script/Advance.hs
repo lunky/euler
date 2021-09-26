@@ -47,7 +47,7 @@ main =  do
     case num of
       Nothing -> getNextNumber "src"
       Just n -> n
-    putStrLn $ show num
+    print num
 --    makeTemplate "src/TemplateProblem.txt" "Problem%%PROBLEM_NUMBER%%.hs" num
 --   makeTemplate "test/TemplateProblem.txt" "Problem%%PROBLEM_NUMBER%%Spec.hs" num
 

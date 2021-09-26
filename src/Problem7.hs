@@ -3,7 +3,7 @@ module Problem7 (
     ) where
 
 run :: Int -> Int
-run input = generatePrimes input
+run = generatePrimes
 
 
 generatePrimes :: Int -> Int

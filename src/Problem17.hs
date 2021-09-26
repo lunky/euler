@@ -4,7 +4,8 @@ module Problem17 (
      ,numCount
      ,numCount'
     ) where
-import Data.Char (digitToInt)
+import Data.Char (toUpper, digitToInt)
+import Data.List
 
 
 run :: Int -> Int
@@ -49,3 +50,15 @@ toWords 1 0 0 0 = "oneThousand"
 toWords _ _ _ _ = error "valid input is between 0 and 1000 inclusive"
 
 
+proper :: String -> String
+proper [] = []
+proper (x:xs)
+  | null xs = [toUpper x]
+  | otherwise = toUpper x:xs
+
+toJadenCase :: String -> String
+toJadenCase js =unwords $ map proper $ words js
+
+isSquare :: Integral n => n -> Bool
+isSquare x = fromInteger (round $ sqrt (fromIntegral x)) 
+    == sqrt (fromIntegral x)
