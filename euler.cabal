@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d118356b1819a76fb53f99b260849f9aae8bd14ac660b3a0f0ac1e92faa3242a
+-- hash: 38802e9346d7556f00f4a93e04e92507f3ce15bcf943aa232b3c476f56d6699d
 
 name:           euler
 version:        0.1.0.0
@@ -36,6 +36,7 @@ library
       Problem14
       Problem17
       Problem18
+      Problem19
       Problem2
       Problem20
       Problem3
@@ -77,6 +78,7 @@ test-suite euler-test
       Problem14Spec
       Problem17Spec
       Problem18Spec
+      Problem19Spec
       Problem1Spec
       Problem20Spec
       Problem2Spec
