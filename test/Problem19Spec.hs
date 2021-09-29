@@ -23,6 +23,17 @@ spec = do
       let input =1900
       let expected=365
       daysInYear input `shouldBe` expected
+
+    it "calculates the number of days in a leap year" $ do
+      let input = 2000
+      let expected = 366
+      daysInYear input `shouldBe` expected
+
+    it "calculates the number of days in a non-leap year" $ do
+      let input = 2001
+      let expected = 365
+      daysInYear input `shouldBe` expected
+
   describe "leapYear" $ do
     it "calculates a leap year" $ do
       let input = 1904
@@ -32,8 +43,9 @@ spec = do
       let input = 2000
       let expected = True
       leapYear input `shouldBe` expected
-    it "calculates a century leap year" $ do
+    it "calculates a century non-leap year" $ do
       let input = 1900
       let expected = False
       leapYear input `shouldBe` expected
+
 

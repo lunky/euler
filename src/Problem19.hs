@@ -13,6 +13,7 @@ data Day =  Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday
 data Month =  January | February | March | April | May | June | July | August | September | October | November | December
                 deriving (Eq, Ord, Show, Read, Bounded, Enum)
 
+
 run :: Int
 run = length . filter(==Sunday) $ concatMap (\y-> map (\m-> dow y m 1) [January .. December]) [1901 .. 2000]
 
@@ -22,6 +23,7 @@ daysInYear y = sum $ map (`daysInMonth` y) [January .. December]
 leapYear :: Int -> Bool
 leapYear y = (y `mod` 4 == 0 && y `mod` 100 /= 0) || y `mod` 400 == 0
 
+daysInMonth :: Month -> Int -> Int
 daysInMonth m y
   | m == February = if leapYear y then 29 else 28
   | m `elem` [September, April, June, November] = 30
@@ -29,6 +31,7 @@ daysInMonth m y
 
 
 
+dow :: Int -> Month -> Int -> Day
 dow year month day = [Monday .. Sunday] !! (days year month day `mod` 7) 
 
 days :: Int -> Month -> Int -> Int
